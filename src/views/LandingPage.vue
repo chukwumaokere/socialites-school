@@ -3,7 +3,7 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Socialites School
+                    Socialite's School
                 </h1>
                 <h2 class="subtitle">
                     Take control of your future, learn to code today!
@@ -14,7 +14,14 @@
             </div>
         </div>
     </section>
-    <section class="hero">
+    <section class="hero is-light is-medium">
+        <div class="hero-body">
+            <div class="container">
+                Test
+            </div>
+        </div>
+    </section>
+    <section class="hero is-medium">
         <div class="hero-body">
             <div class="container">
                 Test
