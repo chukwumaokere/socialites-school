@@ -7,7 +7,14 @@ const routes = [
   {
     path: '/',
     name: 'LandingPage',
-    component: LandingPage
+    component: LandingPage,
+    meta: {
+      title: "Learn about Socialite's School",
+      metaTags: [
+        { name: 'description', content: "Socialite's School landing page" }, 
+        { property: 'og:description', content: "Socialite's School landing page" },
+      ],
+    }
   },
   {
     path: '/about',
@@ -25,6 +32,9 @@ const routes = [
   {
     path: '/:pathMatch(.*)*',
     component: PageNotFound,
+    meta: {
+      title: "404 — Page Not Found"
+    },
   },
 
 ]
