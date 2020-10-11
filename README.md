@@ -1,4 +1,5 @@
 # socialitesschool
+The website for socialitesschool
 
 ## Project setup
 ```
