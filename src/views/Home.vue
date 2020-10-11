@@ -1,6 +1,9 @@
 <template>
   <Navbar />
   <Container> 
+    <div>
+      Home
+    </div>
   </Container>
 </template>
 

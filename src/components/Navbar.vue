@@ -2,7 +2,8 @@
   <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <router-link class="navbar-item" to="/home">
-      <img src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png" >
+      <!-- <img src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png" >-->
+      <p>{soc} [ial] (ites) . &lt;io/&gt; </p>
     </router-link>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -15,8 +16,8 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <router-link class="navbar-item" to="/home">Home</router-link>
-    
-      <router-link class="navbar-item" to="/">Documentation</router-link>
+      <router-link class="navbar-item" to="/courses">Courses</router-link>
+      <router-link class="navbar-item" to="/plans">Plans</router-link>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -27,12 +28,15 @@
           <router-link class="navbar-item" to="/about">
             About
           </router-link>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
+          <router-link to="/documentation" class="navbar-item">
+            Documentation
+          </router-link>
+          <router-link to="/contact" class="navbar-item">
             Contact
-          </a>
+          </router-link>
+          <router-link to="/" class="navbar-item"> 
+            Landing Page
+          </router-link>
           <hr class="navbar-divider">
           <a class="navbar-item">
             Report an issue

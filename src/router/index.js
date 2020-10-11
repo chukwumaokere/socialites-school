@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import LandingPage from '@/views/LandingPage';
 import PageNotFound from '@/views/PageNotFound';
+import Courses from '@/views/Courses';
+import Plans from "@/views/Plans"
 
 const routes = [
   {
@@ -28,6 +30,16 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/courses',
+    name: 'Courses',
+    component: Courses,
+  },
+  {
+    path: '/plans',
+    name: 'Plans',
+    component: Plans,
   },
   {
     path: '/:pathMatch(.*)*',
