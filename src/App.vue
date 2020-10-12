@@ -8,7 +8,6 @@ export default {
     '$route' (to){
       document.title = to.meta.title || "Socialite's School"
     },
-    immediate: true
   },
 }
 </script>

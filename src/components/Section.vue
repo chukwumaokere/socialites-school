@@ -4,7 +4,12 @@
         <div :class="heroBody">
             <div :class="'container ' + textorientation">
                 <h1 class="title">{{title}}</h1>
-                <slot />
+                <slot></slot>
+            </div>
+        </div>
+        <div v-if="footerContent" class="hero-foot">
+            <div class="container has-text-centered">
+                <slot name="footer"></slot>
             </div>
         </div>
     </section>
@@ -24,10 +29,11 @@ export default {
         textorientation: String,
         hero: Boolean,
         withNavBar: Boolean,
+        footerContent: Boolean,
     },
     setup(props){
         let heroVal = props.hero ? 'hero ' : '';
-        let heroBody = props.hero? 'hero-body' : '';
+        let heroBody = props.hero ? 'hero-body' : '';
         return {
             heroVal,
             heroBody,

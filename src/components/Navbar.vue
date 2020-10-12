@@ -100,6 +100,7 @@ import Button from "@/components/Button";
 import Buttons from "@/components/Buttons";
 import { ref } from "vue";
 //import Container from "@/components/Container"
+
 export default {
     components: {
         Button,
@@ -107,6 +108,9 @@ export default {
         //Container,
     },
     setup(){
+        const login = () => {
+          console.log('logging in');
+        }
         let isactive = ref("");
         let toggle_active = () => {
             if (isactive.value == 'is-active'){
@@ -118,6 +122,7 @@ export default {
         return { 
             isactive,
             toggle_active,
+            login
         }
     }
 }
