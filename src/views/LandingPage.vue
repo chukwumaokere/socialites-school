@@ -25,7 +25,7 @@
             </div>
         </template>
         <template v-slot:footer>
-            <Button class="is-large" text="Read more" theme="is-primary" icon="fas fa-arrow-down" @click="goTo('courses')" style="padding-bottom: 3rem;" />
+            <Button class="is-large" text="Read more" theme="is-primary" icon="fas fa-arrow-down" @click="goTo('courses')" style="padding-bottom: 3rem; background-color: transparent;" />
         </template>
     </Section>
     <Section id="courses" hero size="is-medium" textorientation="has-text-centered" color="is-light" title="Some of our awesome courses" >
