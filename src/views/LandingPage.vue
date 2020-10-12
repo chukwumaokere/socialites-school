@@ -33,7 +33,7 @@
             <UnorderedList class="column" title="Front-End Development:" :content="front_end_devlopment" />
             <UnorderedList class="column" title="Front-End Design:" :content="front_end_design" />
             <UnorderedList class="column" title="Mobile App Development:" :content="mobile_app_development" />
-            <UnorderedList class="column" title="Back End Development:" :content="back_end_development" />
+            <UnorderedList class="column" title="Back-End Development:" :content="back_end_development" />
         </div>
     </Section>
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-success is-bold" title="Flexible payment plans to fit your need">
