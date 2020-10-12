@@ -35,6 +35,8 @@
             <UnorderedList class="column" title="Mobile App Development:" :content="mobile_app_development" />
             <UnorderedList class="column" title="Back-End Development:" :content="back_end_development" />
         </div>
+        <br>
+        <strong>...And at the end we help you find jobs, remote or local, during these tough times!</strong>
     </Section>
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-success is-bold" title="Flexible payment plans to fit your need">
     
@@ -77,8 +79,8 @@ export default {
     setup(){
         let front_end_devlopment = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Vue 3', 'React', 'Svelte', 'Sails.js', 'Electron (for desktop)']
         let front_end_design = ['Modern Design Fundamentals', 'Responsive Design', 'Mobile First Approach', 'Bootstrap', 'TailwindCSS', 'Bulma', 'Semantic UI', 'Materialize', 'Adobe XD', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop']
-        let mobile_app_development = ['Ionic Native', 'React-Native', 'Vue-Native', 'NativeScript', 'Expo']
-        let back_end_development = ['GraphQL', 'MySQL', 'PHP', 'Node.js', 'Socket.io', 'Google Firebase', 'Building APIs']
+        let mobile_app_development = ['Ionic Native', 'React-Native', 'Vue-Native', 'NativeScript', 'Expo', 'Flutter', 'Framework 7']
+        let back_end_development = ['GraphQL', 'MySQL', 'MongoDB', 'NoSQL', 'PHP', 'Node.js', 'Socket.io', 'Google Firebase', 'Building APIs', 'Linux (Server Management)', 'Bash', 'Version Management (Git/SVN)']
         const goTo = (el) => {
             document.getElementById(el).scrollIntoView({behavior: "smooth"});
         }
