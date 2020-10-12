@@ -76,7 +76,7 @@ export default {
     },
     setup(){
         let front_end_devlopment = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Vue 3', 'React', 'Svelte', 'Sails.js', 'Electron (for desktop)']
-        let front_end_design = ['Modern Design Fundamentals', 'Bootstrap', 'TailwindCSS', 'Bulma', 'Semantic UI', 'Materialize', 'Adobe XD', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop']
+        let front_end_design = ['Modern Design Fundamentals', 'Responsive Design', 'Mobile First Approach', 'Bootstrap', 'TailwindCSS', 'Bulma', 'Semantic UI', 'Materialize', 'Adobe XD', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop']
         let mobile_app_development = ['Ionic Native', 'React-Native', 'Vue-Native', 'NativeScript', 'Expo']
         let back_end_development = ['GraphQL', 'MySQL', 'PHP', 'Node.js', 'Socket.io', 'Google Firebase', 'Building APIs']
         const goTo = (el) => {
