@@ -3,7 +3,7 @@
         hero 
         withNavBar 
         size="is-fullheight" 
-        title="Learn modern, cutting-edge front-end technologies from self-taught experts with our one-on-one lessons, premium tutorials and video courses." 
+        title="Learn modern, cutting-edge web development technologies from self-taught experts with our one-on-one lessons, premium tutorials and video courses." 
         color="is-primary is-bold"
         footerContent
         >
