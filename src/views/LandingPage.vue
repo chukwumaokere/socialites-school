@@ -13,14 +13,14 @@
                 Join and get started now:
             </h2>
             <div class="field has-addons" style="width: 70%; min-width:21rem;">
-                <div class="control has-icons-left is-expanded ">
-                    <input type="email" class="input is-large" placeholder="Email address"> 
-                    <span class="icon is-small is-left">
+                <div class="control has-icons-left is-expanded">
+                    <input type="email" class="input is-large is-size-6-mobile" placeholder="Email address"> 
+                    <span class="icon is-small is-left is-size-6-mobile">
                         <i class="fas fa-envelope"></i>
                     </span>
                 </div>
                 <div class="control">
-                    <Button class="is-large" text="Start Learning" theme="is-success" />
+                    <Button class="is-large is-size-6-mobile" text="Start Learning" theme="is-success" />
                 </div>
             </div>
         </template>
