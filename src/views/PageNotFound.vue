@@ -29,5 +29,10 @@ export default {
 </script>
 
 <style>
-
+.hero.is-danger .navbar-dropdown > a.navbar-item {
+    color: #4a4a4a;
+}
+.hero.is-danger .modal-card-body > label  {
+    color: #4a4a4a;
+}
 </style>
