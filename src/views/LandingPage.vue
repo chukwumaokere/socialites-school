@@ -12,7 +12,7 @@
             <h2 class="subtitle">
                 Join and get started now:
             </h2>
-            <div class="field has-addons" style="width: 70%">
+            <div class="field has-addons" style="width: 70%; min-width:21rem;">
                 <div class="control has-icons-left is-expanded ">
                     <input type="email" class="input is-large" placeholder="Email address"> 
                     <span class="icon is-small is-left">
