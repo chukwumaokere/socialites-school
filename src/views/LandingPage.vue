@@ -36,10 +36,19 @@
             <UnorderedList class="column" title="Back-End Development:" :content="back_end_development" />
         </div>
         <br>
-        <strong>...And at the end we help you find jobs, remote or local, during these tough times!</strong>
+        <strong class="subtitle" style="font-weight: 600;">...And at the end we help you find jobs, remote, local, or contract during these tough times!</strong>
     </Section>
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-success is-bold" title="Flexible payment plans to fit your need">
-    
+        <strong class="subtitle" style="font-weight: 600;">The course takes about 4 months to complete, but you can go at your own pace.</strong>
+        <br><br><br>
+        <div class="columns has-text-left">
+            <PriceCard class="column" subtitle="One and Done" subtitleDesc="For any 4-month course of your choosing" price="3000" text="one time payment!" btnText="Choose" helper="* You save 40% by choosing this!" color="is-primary is-fullwidth" />
+            <PriceCard class="column" subtitle="Monthly" subtitleDesc="For any 4-month course of your choosing" price="1000" text="/month" btnText="Choose" color="is-warning is-fullwidth" />
+            <PriceCard class="column is-active" subtitle="6-Month Plan" subtitleDesc="For any 4-month course of your choosing" price="200" text="/week" btnText="Choose" helper="" color="is-success is-fullwidth" />
+            <PriceCard class="column" subtitle="Super Saver" subtitleDesc="For any 4-month course of your choosing" price="100" text="/week" btnText="Choose" helper="* This is a one year payment plan" color="is-danger is-fullwidth" />
+        </div>
+        <br><br><br>
+        <strong class="subtitle" style="font-weight: 600;">BONUS: Every option comes with a one-week free trial of the lessons!</strong>
     </Section>
     <!--
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-warning" title="Testimonies">
@@ -67,6 +76,8 @@
 import Button from "@/components/Button";
 import Section from '@/components/Section'
 import UnorderedList from "@/components/UnorderedList";
+import PriceCard from "@/components/PriceCard"
+//import Card from "@/components/Card";
 
 export default {
     components: {
@@ -74,7 +85,9 @@ export default {
         //Navbar,
         Button,
         Section,
-        UnorderedList
+        UnorderedList,
+        PriceCard,
+  //      Card,
     },
     setup(){
         let front_end_devlopment = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Vue 3', 'React', 'Svelte', 'Sails.js', 'Electron (for desktop)']
