@@ -39,7 +39,7 @@
         <strong class="subtitle" style="font-weight: 600;">...And at the end we help you find jobs, remote, local, or contract during these tough times!</strong>
     </Section>
     <Section hero size="is-fullheight" textorientation="has-text-centered" color="is-success is-bold" title="Flexible payment plans to fit your need">
-        <strong class="subtitle" style="font-weight: 600;">Cheaper than any other bootcamp that average around $13,000 and can be as high as <a href="https://www.coursereport.com/blog/coding-bootcamp-cost-comparison-full-stack-immersives">$21,000</a></strong>
+        <strong class="subtitle" style="font-weight: 600;">Cheaper than any other bootcamp that average around $13,000 and can be as high as <a href="https://www.coursereport.com/blog/coding-bootcamp-cost-comparison-full-stack-immersives">$21,000 *</a></strong>
         <br><br><br>
         <div class="columns has-text-left">
             <PriceCard class="column" subtitle="One and Done" subtitleDesc="For any 4-month course of your choosing" price="3,000" text="one time payment!" btnText="Choose" helper="* You save 40% by choosing this!" color="is-primary is-fullwidth" />
@@ -51,6 +51,8 @@
         <strong class="subtitle" style="font-weight: 600;">The course takes about 4 months to complete, but you can go at your own pace.</strong>
         <br>
         <strong class="subtitle" style="font-weight: 600;">BONUS: Every option comes with a one-week free trial of the lessons!</strong>
+        <br><br>
+        <p class="help">* This figure is as reported by <a href="https://www.coursereport.com/blog/coding-bootcamp-cost-comparison-full-stack-immersives">Course Reports Coding Bootcamp Cost Comparison</a>. Click to learn more</p>
     </Section>
     <!--
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-warning" title="Testimonies">
