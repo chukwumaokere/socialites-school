@@ -5,7 +5,7 @@
           <h4 class="card-subtitle">{{subtitle}}</h4>
           <br> 
           <p class="card-subtitle-desc">{{subtitleDesc}}</p> 
-          <h1 class="card-title"><span>$</span>{{price}}</h1> 
+          <h1 class="card-title"><span class="smol-dollar">$</span>{{price}}</h1> 
           <h5 class="card-text">{{text}}</h5> 
           <br> 
           <a href="/signup" :class="'button ' + color">{{btnText}}</a>
@@ -85,5 +85,9 @@ h1 {
 }
 .h4, h4 {
     font-size: 1.5rem;
+}
+.smol-dollar{
+    font-size: 1.5rem;
+    vertical-align: super;
 }
 </style>
