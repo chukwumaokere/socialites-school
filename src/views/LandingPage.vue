@@ -63,7 +63,15 @@
     
     </Section>
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-info" title="Ready to join?">
-    
+        <Container class="has-text-left box">
+            <div class="columns">
+                <div class="column">
+                    <Form />
+                </div>
+                <div class="column">
+                </div>
+            </div>
+        </Container>
     </Section>
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-dark">
         <div class="content has-text-centered">
@@ -81,16 +89,19 @@ import Button from "@/components/Button";
 import Section from '@/components/Section'
 import UnorderedList from "@/components/UnorderedList";
 import PriceCard from "@/components/PriceCard"
+import Form from "@/components/Form";
+import Container from "@/components/Container";
 //import Card from "@/components/Card";
 
 export default {
     components: {
-        //Container,
+        Container,
         //Navbar,
         Button,
         Section,
         UnorderedList,
         PriceCard,
+        Form,
   //      Card,
     },
     setup(){
