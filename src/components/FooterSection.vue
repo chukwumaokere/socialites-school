@@ -2,7 +2,7 @@
     <div class="content has-text-centered">
         <div class="columns">
             <div class="column">
-                <UnorderedListLinks titleColor="has-text-white" linkColor="has-text-success" :content="[['Courses', '/courses'], ['Pricing', '/plans'], ['Login', '/login'], ['Join Now', '/join']]" title="Home" size="is-small" />
+                <UnorderedListLinks titleColor="has-text-white" linkColor="has-text-success" :content="[['Courses', '/courses'], ['Pricing', '/plans'], ['Login', '/login'], ['Join Now', '/join']]" title="Students" size="is-small" />
             </div>
             <div class="column">
                 <UnorderedListLinks titleColor="has-text-white" linkColor="has-text-success" :content="[['Jobs', '/jobs'], ['Contact Us', '/contact']]" title="Teachers" size="is-small" />
