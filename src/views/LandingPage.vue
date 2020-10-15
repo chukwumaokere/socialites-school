@@ -77,9 +77,9 @@
                     emailPlaceholder="chuckokere@socialites.app"
                     :select="options"
                     textareaLabel="Message"
-                    textareaPlaceholder="What are you interested in?"
+                    textareaPlaceholder="Tell us a little about yourself, anything goes!"
                     selectLabel="Interested In:"
-                    TAC
+                    tacLocation="/tac"
                     submitButton="Submit"
                     submitButtonTheme="is-link"
                     cancelButton="Cancel"
@@ -92,7 +92,8 @@
                         <br>
                         <h3 class="subtitle" style="color: #4a4a4a;"> We offer scholarships to people in need, women, veterans and minority groups. </h3>
                         <h3 class="subtitle" style="color: #4a4a4a;"> We also offer an additional 10% off on referrals and friends and family discounts!</h3>                        
-                        <p> Let us know what accommodations you might need and we'll definitely put those first </p>
+                        <h3 class="subtitle" style="color: #4a4a4a;"> All students get access to our Discord where you can talk with other students and teachers to collaborate and learn together!</h3>
+                        <p> We're here for you so please let us know what accommodations you might need and we'll definitely put those first </p>
                         
                     </div>
                 </div>
@@ -100,11 +101,7 @@
         </Container>
     </Section>
     <Section hero size="" textorientation="has-text-centered" color="is-dark">
-        <div class="content has-text-centered">
-            <p>
-            <strong style="color: white">Socialites School</strong> by <a href="https://chukwumaokere.com">Chuck Okere</a>.
-            </p>
-        </div>
+        <FooterSection />
     </Section>
 </template>
 
@@ -117,6 +114,7 @@ import UnorderedList from "@/components/UnorderedList";
 import PriceCard from "@/components/PriceCard"
 import Form from "@/components/Form";
 import Container from "@/components/Container";
+import FooterSection from "@/components/FooterSection"
 //import Card from "@/components/Card";
 
 export default {
@@ -128,6 +126,7 @@ export default {
         UnorderedList,
         PriceCard,
         Form,
+        FooterSection,
   //      Card,
     },
     setup(){

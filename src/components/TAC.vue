@@ -3,7 +3,7 @@
   <div class="control">
     <label class="checkbox">
       <input type="checkbox">
-      I agree to the <a :href="location">terms and conditions</a>
+      I agree to the <router-link :to="location">terms and conditions</router-link>
     </label>
   </div>
 </div>

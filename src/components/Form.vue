@@ -10,7 +10,7 @@
 
 <TextareaInput :label="textareaLabel" :placeholder="textareaPlaceholder" />
 
-<TAC v-if="TAC" />
+<TAC v-if="tacLocation" :location="tacLocation" />
 <!--
 <div class="field">
   <div class="control">
@@ -63,6 +63,7 @@ export default {
         submitButtonTheme: String,
         cancelButton: String,
         cancelButtonTheme: String,
+        tacLocation: String,
     },
     setup(){        
         return {

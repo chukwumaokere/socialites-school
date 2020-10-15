@@ -1,8 +1,8 @@
 <template>
   <div :class="'content has-text-left ' + size ">
-        <h4> {{title}} </h4>
+        <h4 :class="titleColor"> {{title}} </h4>
         <ul>
-            <li v-for='(cont, index) in content' :key="index" >{{cont}}</li>
+            <li v-for='(cont, index) in content' :key="index" ><router-link :class="linkColor" :to="cont[1]">{{cont[0]}}</router-link></li>
         </ul>
     </div>
 </template>
@@ -13,6 +13,8 @@ export default {
         title: String,
         content: Array,
         size: String,
+        titleColor: String,
+        linkColor: String,
     }
 
 }
