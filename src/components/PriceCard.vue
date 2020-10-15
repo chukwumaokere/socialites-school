@@ -8,7 +8,7 @@
           <h1 class="card-title"><span class="smol-dollar">$</span>{{price}}</h1> 
           <h5 class="card-text">{{text}}</h5> 
           <br> 
-          <a href="/signup" :class="'button ' + color">{{btnText}}</a>
+          <a @click="goTo('join')" :class="'button ' + color">{{btnText}}</a>
           <br>
           <p v-if="helper" :class="'help ' + color ">{{helper}}</p>
         </div>
@@ -25,6 +25,14 @@ export default {
         text: String,
         btnText: String,
         helper: String,
+    },
+    setup(){
+         const goTo = (el) => {
+            document.getElementById(el).scrollIntoView({behavior: "smooth"});
+        }
+        return {
+            goTo,
+        }
     }
 }
 </script>
@@ -47,7 +55,7 @@ export default {
     /* border: 1px solid rgba(0,0,0,.125);*/
     border: 0.1rem solid #f5f5f5;
     border-radius: .25rem;
-    margin: .5rem .5rem;
+    margin: 1.5rem .75rem;
 }
 .card-img-top {
     width: 100%;

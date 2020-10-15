@@ -59,21 +59,47 @@
     
     </Section>
     -->
+    <!--
     <Section hero size="is-medium" textorientation="has-text-centered" color="is-warning" title="Meet your teachers">
     
     </Section>
-    <Section hero size="is-medium" textorientation="has-text-centered" color="is-info" title="Ready to join?">
+    -->
+    <Section id="join" hero size="is-medium" textorientation="has-text-centered" color="is-info" title="Ready to join?">
         <Container class="has-text-left box">
             <div class="columns">
                 <div class="column">
-                    <Form />
+                    <Form 
+                    nameLabel="Name"
+                    namePlaceholder="Chuck Okere"
+                    usernameLabel="Username"
+                    usernamePlaceholder="chuckokere"
+                    emailLabel="Email"
+                    emailPlaceholder="chuckokere@socialites.app"
+                    :select="options"
+                    textareaLabel="Message"
+                    textareaPlaceholder="What are you interested in?"
+                    selectLabel="Interested In:"
+                    TAC
+                    submitButton="Submit"
+                    submitButtonTheme="is-link"
+                    cancelButton="Cancel"
+                    cancelButtonTheme="is-link is-light"
+                     />
                 </div>
-                <div class="column">
+                <div style="margin: 1rem;" class="column box">
+                    <div style="padding: 2rem;">
+                        <h3 class="title" style="color: #4a4a4a;"> The Tech Schooling System for the Social Era  </h3> 
+                        <br>
+                        <h3 class="subtitle" style="color: #4a4a4a;"> We offer scholarships to people in need, women, veterans and minority groups. </h3>
+                        <h3 class="subtitle" style="color: #4a4a4a;"> We also offer an additional 10% off on referrals and friends and family discounts!</h3>                        
+                        <p> Let us know what accommodations you might need and we'll definitely put those first </p>
+                        
+                    </div>
                 </div>
             </div>
         </Container>
     </Section>
-    <Section hero size="is-medium" textorientation="has-text-centered" color="is-dark">
+    <Section hero size="" textorientation="has-text-centered" color="is-dark">
         <div class="content has-text-centered">
             <p>
             <strong style="color: white">Socialites School</strong> by <a href="https://chukwumaokere.com">Chuck Okere</a>.
@@ -105,6 +131,7 @@ export default {
   //      Card,
     },
     setup(){
+        let options = ['Front-End Development', 'Front-End Design', 'Mobile-App Development', 'Back-End Development', 'Full-Stack Development'];
         let front_end_devlopment = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Vue 3', 'React', 'Svelte', 'Sails.js', 'Electron (for desktop)']
         let front_end_design = ['Modern Design Fundamentals', 'Responsive Design', 'Mobile First Approach', 'Bootstrap', 'TailwindCSS', 'Bulma', 'Semantic UI', 'Materialize', 'Adobe XD', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop']
         let mobile_app_development = ['Ionic Native', 'React-Native', 'Vue-Native', 'NativeScript', 'Expo', 'Flutter', 'Framework 7']
@@ -117,10 +144,12 @@ export default {
             front_end_devlopment,
             front_end_design,
             mobile_app_development,
-            back_end_development            
+            back_end_development,
+            options            
         }
     }
 }
+
 </script>
 
 <style>

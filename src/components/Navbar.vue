@@ -26,18 +26,18 @@
 
         <div class="navbar-dropdown">
           <router-link class="navbar-item" to="/about">
-            About
-          </router-link>
-          <router-link to="/documentation" class="navbar-item">
-            Documentation
+            About Us
           </router-link>
           <router-link to="/contact" class="navbar-item">
-            Contact
+            Contact Us
           </router-link>
           <router-link to="/" class="navbar-item"> 
             Landing Page
           </router-link>
           <hr class="navbar-divider">
+          <router-link to="/jobs" class="navbar-item">
+            Jobs
+          </router-link>
           <a class="navbar-item">
             Report an issue
           </a>
