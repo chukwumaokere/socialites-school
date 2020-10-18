@@ -3,7 +3,8 @@ import Home from '../views/Home.vue'
 import LandingPage from '@/views/LandingPage';
 import PageNotFound from '@/views/PageNotFound';
 import Courses from '@/views/Courses';
-import Plans from "@/views/Plans"
+import Plans from "@/views/Plans";
+import SignUpLoginPage from "@/views/SignUpLoginPage";
 
 const routes = [
   {
@@ -40,6 +41,11 @@ const routes = [
     path: '/plans',
     name: 'Plans',
     component: Plans,
+  },
+  {
+    path: '/signup',
+    name: 'Sign Up',
+    component: SignUpLoginPage
   },
   {
     path: '/:pathMatch(.*)*',

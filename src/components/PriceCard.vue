@@ -8,7 +8,8 @@
           <h1 class="card-title"><span class="smol-dollar">$</span>{{price}}</h1> 
           <h5 class="card-text">{{text}}</h5> 
           <br> 
-          <a @click="goTo('join')" :class="'button ' + color">{{btnText}}</a>
+          <slot />
+          <a @click="goTo('join'); setPlan(subtitle);" :class="'button ' + color">{{btnText}}</a>
           <br>
           <p v-if="helper" :class="'help ' + color ">{{helper}}</p>
         </div>
@@ -25,6 +26,12 @@ export default {
         text: String,
         btnText: String,
         helper: String,
+    },
+    methods: {
+        setPlan(type) {
+            console.log('setting type to', type)
+            this.$emit('set-type', type);
+        }
     },
     setup(){
          const goTo = (el) => {

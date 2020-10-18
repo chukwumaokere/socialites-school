@@ -2,7 +2,7 @@
   <div class="field">
   <label class="label">{{label}}</label>
   <div class="control">
-    <textarea class="textarea" :placeholder="placeholder"></textarea>
+    <textarea :id="id" class="textarea" :placeholder="placeholder"></textarea>
   </div>
 </div>
 </template>
@@ -12,6 +12,7 @@ export default {
     props: {
         label: String,
         placeholder: String,
+        id: String,
     }
 }
 </script>

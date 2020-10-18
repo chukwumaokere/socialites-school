@@ -2,7 +2,7 @@
   <div class="field">
   <div class="control">
     <label class="checkbox">
-      <input type="checkbox">
+      <input :id="id" type="checkbox">
       I agree to the <router-link :to="location">terms and conditions</router-link>
     </label>
   </div>
@@ -13,6 +13,7 @@
 export default {
     props:{ 
         location: String,
+        id: String,
     }
 }
 </script>

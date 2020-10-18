@@ -6,13 +6,15 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "surge": "surge --project ./dist --domain ssdev.surge.sh" 
+    "surge": "surge --project ./dist --domain ssdev.surge.sh",
+    "deploy": "surge --project ./dist --domain ssdev.surge.sh"
   },
   "dependencies": {
     "buefy": "^0.9.3",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-beta.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

@@ -9,6 +9,9 @@
                 <h2 class="subtitle">
                     Page not found
                 </h2>
+                <p>
+                    Think you're seeing this message in error? <br> Please <router-link class="has-text-link" to="/contact">let us know</router-link>
+                </p>
                 <!-- <BuefyButton /> -->
             </div>
         </div>

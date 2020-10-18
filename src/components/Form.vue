@@ -1,16 +1,18 @@
 <template>
 
-<NameInput :label="nameLabel" :placeholder="namePlaceholder" />
+<NameInput id="form_name" :label="nameLabel" :placeholder="namePlaceholder" />
 
-<UsernameInput :label="usernameLabel" :placeholder="usernamePlaceholder" />
+<UsernameInput id="form_username" :label="usernameLabel" :placeholder="usernamePlaceholder" />
 
-<EmailInput :label="emailLabel" :placeholder="emailPlaceholder" />
+<EmailInput id="form_email" :label="emailLabel" :placeholder="emailPlaceholder" />
 
-<Select :label="selectLabel" :options="select" />
+<Select :id="selectId" :label="selectLabel" :options="select" />
 
-<TextareaInput :label="textareaLabel" :placeholder="textareaPlaceholder" />
+<slot name="after-select" />
 
-<TAC v-if="tacLocation" :location="tacLocation" />
+<TextareaInput id="form_textarea" :label="textareaLabel" :placeholder="textareaPlaceholder" />
+
+<TAC id="form_tac" v-if="tacLocation" :location="tacLocation" />
 <!--
 <div class="field">
   <div class="control">
@@ -28,11 +30,11 @@
 
 <div v-if="submitButton" class="field is-grouped">
   <div class="control">
-    <Button :text="submitButton" :theme="submitButtonTheme" />
+    <Button :text="submitButton" :theme="submitButtonTheme" @click="submitForm" />
     <!--<button class="button is-link">Submit</button>-->
   </div>
   <div v-if="cancelButton" class="control">
-      <Button :text="cancelButton" :theme="cancelButtonTheme" />
+      <Button :text="cancelButton" :theme="cancelButtonTheme"  />
     <!--<button class="button is-link is-light">Cancel</button>-->
   </div>
 </div>
@@ -57,6 +59,7 @@ export default {
         emailPlaceholder: String,
         select: Array,
         selectLabel: String,
+        selectId: String,
         textareaLabel: String,
         textareaPlaceholder: String,
         submitButton: String,
@@ -75,6 +78,11 @@ export default {
             TAC,
             Button
         }
+    },
+    methods: {
+      submitForm() {
+        this.$emit('submit-form')
+      }
     }
 
 }

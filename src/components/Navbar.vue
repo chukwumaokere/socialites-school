@@ -38,17 +38,17 @@
           <router-link to="/jobs" class="navbar-item">
             Jobs
           </router-link>
-          <a class="navbar-item">
+          <router-link to="/report" class="navbar-item">
             Report an issue
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
 
     <div class="navbar-end">
-      <div class="navbar-item">
+      <div class="navbar-item level is-mobile">
         <Buttons>
-          <Button text="Sign up" theme="is-primary" />
+          <Button text="Sign up" theme="is-primary" @click="goToSignup" />
             <div :class="'dropdown is-right ' + isactive" >
                 <div class="dropdown-trigger" >                    
                     <Button text="Log in" theme="is-light" icon="fas fa-angle-down" aria-haspopup="true" aria-controls="dropdown-menu"  @click="toggle_active" />
@@ -60,7 +60,7 @@
                                 <section class="modal-card-body">
                                     <div class="field">
                                         <div class="control has-icons-left">
-                                            <input class="input" type="email" placeholder="Email">
+                                            <input v-model="username" name="username" class="input" type="email" placeholder="Email">
                                             <span class="icon is-small is-left">
                                                 <i class="fas fa-envelope"></i>
                                             </span>
@@ -68,7 +68,7 @@
                                     </div>
                                     <div class="field">
                                         <div class="control has-icons-left">
-                                            <input class="input" type="password" placeholder="Password">
+                                            <input v-model="password" class="input" type="password" placeholder="Password" name="Password">
                                             <span class="icon is-small is-left">
                                                 <i class="fas fa-lock"></i>
                                             </span>
@@ -99,6 +99,8 @@
 import Button from "@/components/Button";
 import Buttons from "@/components/Buttons";
 import { ref } from "vue";
+import API from '@/lib/API';
+import Router from '@/router';
 //import Container from "@/components/Container"
 
 export default {
@@ -108,8 +110,25 @@ export default {
         //Container,
     },
     setup(){
+        
+        const goToSignup = () => {
+          Router.push({name:'Sign Up', params: { something: 'yo' } });
+        }
+        const username = ref(''), password = ref('');
         const login = () => {
-          console.log('logging in');
+          if(username.value && password.value){
+            let res = API.Login({username, password})
+            if (res.success){
+              console.log('details succeeded')
+              //TODO: update this.$store.user_data
+              //TODO: re-render navbar to show users name
+            }else{
+              console.log('details failed')
+            }
+          }else{
+            console.log('no details entered');
+            return false;
+          }
         }
         let isactive = ref("");
         let toggle_active = () => {
@@ -122,7 +141,10 @@ export default {
         return { 
             isactive,
             toggle_active,
-            login
+            login,
+            username,
+            password,
+            goToSignup,
         }
     }
 }
@@ -138,4 +160,15 @@ a.router-link-exact-active {
 .dropdown-menu{
     transition: 3s;
 }
+
+@media only screen and (max-width: 1023px) {
+  .dropdown-content {
+    max-width: 12rem;
+  }
+  .modal-card, .modal-content{
+    margin: .5rem 0px;
+  }
+}
+
+
 </style>

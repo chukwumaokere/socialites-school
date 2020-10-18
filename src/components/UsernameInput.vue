@@ -2,7 +2,7 @@
   <div class="field">
   <label class="label">{{label}}</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" :placeholder="placeholder">
+    <input :id="id" class="input is-success" type="text" :placeholder="placeholder">
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -19,6 +19,7 @@ export default {
     props: {
         label: String,
         placeholder: String,
+        id: String,
     }
 
 }

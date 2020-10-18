@@ -42,10 +42,10 @@
         <strong class="subtitle" style="font-weight: 600;">Cheaper than any other bootcamp which averages around $13,000 and can be as high as <a href="https://www.coursereport.com/blog/coding-bootcamp-cost-comparison-full-stack-immersives">$21,000 *</a></strong>
         <br><br><br>
         <div class="columns has-text-left">
-            <PriceCard class="column" subtitle="One and Done" subtitleDesc="For any 4-month course of your choosing" price="3,000" text="one time payment!" btnText="Choose" helper="* You save 40% by choosing this!" color="is-primary is-fullwidth" />
-            <PriceCard class="column" subtitle="Monthly" subtitleDesc="For any 4-month course of your choosing" price="1,000" text="/month" btnText="Choose" color="is-warning is-fullwidth" />
-            <PriceCard class="column is-active" subtitle="6-Month Plan" subtitleDesc="For any 4-month course of your choosing" price="200" text="/week" btnText="Choose" helper="" color="is-success is-fullwidth" />
-            <PriceCard class="column" subtitle="Super Saver" subtitleDesc="For any 4-month course of your choosing" price="100" text="/week" btnText="Choose" helper="* This is a one year payment plan" color="is-danger is-fullwidth" />
+            <PriceCard @set-type="updateType" class="column" subtitle="One and Done" subtitleDesc="For any 4-month course of your choosing" price="3,000" text="one time payment!" btnText="Choose" helper="* You save 40% by choosing this!" color="is-primary is-fullwidth" />
+            <PriceCard @set-type="updateType" class="column" subtitle="Monthly" subtitleDesc="For any 4-month course of your choosing" price="1,000" text="/month" btnText="Choose" color="is-warning is-fullwidth" />
+            <PriceCard @set-type="updateType" class="column is-active" subtitle="6-Month Plan" subtitleDesc="For any 4-month course of your choosing" price="200" text="/week" btnText="Choose" helper="" color="is-success is-fullwidth" />
+            <PriceCard @set-type="updateType" class="column" subtitle="Super Saver" subtitleDesc="For any 4-month course of your choosing" price="100" text="/week" btnText="Choose" helper="* This is a one year payment plan" color="is-danger is-fullwidth" />
         </div>
         <br><br><br>
         <strong class="subtitle" style="font-weight: 600;">The course takes about 4 months to complete, but you can go at your own pace.</strong>
@@ -79,12 +79,18 @@
                     textareaLabel="Message"
                     textareaPlaceholder="Tell us a little about yourself, anything goes!"
                     selectLabel="Interested In:"
+                    selectId="interested_in"
                     tacLocation="/tac"
                     submitButton="Submit"
                     submitButtonTheme="is-link"
                     cancelButton="Cancel"
                     cancelButtonTheme="is-link is-light"
-                     />
+                    @submit-form="submitForm"
+                    >
+                    <template v-slot:after-select>
+                        <Select id="plan_type" label="Plan Type:" :options="plan_types" />
+                    </template>
+                    </Form>
                 </div>
                 <div style="margin: 1rem;" class="column box">
                     <div style="padding: 2rem;">
@@ -114,7 +120,8 @@ import UnorderedList from "@/components/UnorderedList";
 import PriceCard from "@/components/PriceCard"
 import Form from "@/components/Form";
 import Container from "@/components/Container";
-import FooterSection from "@/components/FooterSection"
+import FooterSection from "@/components/FooterSection";
+import Select from "@/components/Select";
 //import Card from "@/components/Card";
 
 export default {
@@ -127,9 +134,11 @@ export default {
         PriceCard,
         Form,
         FooterSection,
+        Select,
   //      Card,
     },
     setup(){
+        let plan_types = ['One and Done', 'Monthly', '6-Month Plan', 'Super Saver'];
         let options = ['Front-End Development', 'Front-End Design', 'Mobile-App Development', 'Back-End Development', 'Full-Stack Development'];
         let front_end_devlopment = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Vue 3', 'React', 'Svelte', 'Sails.js', 'Electron (for desktop)']
         let front_end_design = ['Modern Design Fundamentals', 'Responsive Design', 'Mobile First Approach', 'Bootstrap', 'TailwindCSS', 'Bulma', 'Semantic UI', 'Materialize', 'Adobe XD', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop']
@@ -144,7 +153,31 @@ export default {
             front_end_design,
             mobile_app_development,
             back_end_development,
-            options            
+            options,
+            plan_types            
+        }
+    },
+    methods: {
+        updateType(type){
+            document.getElementById('plan_type').value = type;
+        },
+        submitForm(){
+            let info;
+            info = {
+                name: document.getElementById('form_name').value,
+                username:  document.getElementById('form_username').value,
+                email:  document.getElementById('form_email').value,
+                interested_in: document.getElementById('interested_in').value,
+                plan_type:  document.getElementById('plan_type').value,
+                message:  document.getElementById('form_textarea').value
+            }
+            let tac = document.getElementById('form_tac');
+            if(tac.checked && !Object.values(info).some(v => (v == null || v == ''))){
+                console.log(info,'it works and everythings filled');
+            }else{
+                console.log('check for empty fields', tac.checked, info)
+            }
+            
         }
     }
 }

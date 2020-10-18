@@ -2,7 +2,7 @@
   <div class="field">
   <label class="label">{{label}}</label>
   <div class="control">
-    <input class="input" type="text" :placeholder="placeholder">
+    <input :id="id" class="input" type="text" :placeholder="placeholder">
   </div>
 </div>
 </template>
@@ -12,6 +12,7 @@ export default {
     props: {
         label: String,
         placeholder: String,
+        id: String,
     }
 
 }
