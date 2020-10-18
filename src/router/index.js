@@ -51,7 +51,10 @@ const routes = [
   {
     path: '/finishsignup',
     name: 'Finish Sign Up',
-    component: FinishSignUp
+    component: FinishSignUp,
+    meta: {
+      title: 'Finish Creating Your Account'
+    }
   },
   {
     path: '/:pathMatch(.*)*',

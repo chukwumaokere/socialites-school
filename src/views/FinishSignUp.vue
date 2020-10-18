@@ -1,4 +1,6 @@
 <template>
+<Container>
+<Section hero size="is-fullheight" withNavBar >
   <div class="steps" id="stepsDemo">
   <div class="step-item is-active is-success">
     <div class="step-marker">1</div>
@@ -133,18 +135,27 @@
   </div>
   <div class="steps-actions">
     <div class="steps-action">
-      <a href="#/finishsignup" data-nav="previous" class="button is-light" @click.stop>Previous</a>
+      <a href="#" data-nav="previous" class="button is-light">Previous</a>
     </div>
     <div class="steps-action">
-      <a href="#/finishsignup" data-nav="next" class="button is-light" @click.stop>Next</a>
+      <a href="#" data-nav="next" class="button is-light" >Next</a>
     </div>
   </div>
 </div>
+</Section>
+</Container>
 </template>
 
 <script>
+import Container from "@/components/Container"
+// import Navbar from "@/components/Navbar"
+import Section from "@/components/Section"
 export default {
-
+    components: {
+        Container,
+        // Navbar,
+        Section,
+    }
 }
 </script>
 
