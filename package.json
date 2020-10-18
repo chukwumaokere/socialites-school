@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint",
     "surge": "surge --project ./dist --domain ssdev.surge.sh",
     "deploy": "surge --project ./dist --domain ssdev.surge.sh",
-    "git": "git add * && git commit -a -m 'update' && git push origin master "
+    "git": "git add * && git commit -a -m \"$npm_config_message\" && git push origin master "
   },
   "dependencies": {
     "buefy": "^0.9.3",
