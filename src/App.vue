@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import 'bulma-extensions/dist/js/bulma-extensions.min.js';
 export default {
   watch: {
     '$route' (to){
@@ -13,5 +14,6 @@ export default {
 </script>
 
 <style>
-
+/*@import 'assets/bulma/css/bulma.min.css';*/
+@import '~bulma-extensions/dist/css/bulma-extensions.min.css';
 </style>

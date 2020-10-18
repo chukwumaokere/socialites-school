@@ -69,11 +69,11 @@
             <div class="columns">
                 <div class="column">
                     <Form 
-                    nameLabel="Name"
+                    nameLabel="Name *"
                     namePlaceholder="Chuck Okere"
-                    usernameLabel="Username"
+                    usernameLabel="Username *"
                     usernamePlaceholder="chuckokere"
-                    emailLabel="Email"
+                    emailLabel="Email *"
                     emailPlaceholder="chuckokere@socialites.app"
                     :select="options"
                     textareaLabel="Message"
@@ -122,6 +122,7 @@ import Form from "@/components/Form";
 import Container from "@/components/Container";
 import FooterSection from "@/components/FooterSection";
 import Select from "@/components/Select";
+import API from "@/lib/API";
 //import Card from "@/components/Card";
 
 export default {
@@ -169,13 +170,20 @@ export default {
                 email:  document.getElementById('form_email').value,
                 interested_in: document.getElementById('interested_in').value,
                 plan_type:  document.getElementById('plan_type').value,
-                message:  document.getElementById('form_textarea').value
             }
             let tac = document.getElementById('form_tac');
             if(tac.checked && !Object.values(info).some(v => (v == null || v == ''))){
-                console.log(info,'it works and everythings filled');
+                info.message = document.getElementById("form_textarea").value;
+                //console.log(info,'it works and everythings filled');
+                API.SubmitForm(info).then(res => {
+                    if(res.success){
+                        //morph form to success : Finish sign up by clicking the confirmation email you were just sent
+                    }else{
+                        //show some error
+                    }
+                })
             }else{
-                console.log('check for empty fields', tac.checked, info)
+                //console.log('check for empty fields', tac.checked, info)
             }
             
         }

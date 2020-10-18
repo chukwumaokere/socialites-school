@@ -5,6 +5,7 @@ import PageNotFound from '@/views/PageNotFound';
 import Courses from '@/views/Courses';
 import Plans from "@/views/Plans";
 import SignUpLoginPage from "@/views/SignUpLoginPage";
+import FinishSignUp from '@/views/FinishSignUp';
 
 const routes = [
   {
@@ -46,6 +47,11 @@ const routes = [
     path: '/signup',
     name: 'Sign Up',
     component: SignUpLoginPage
+  },
+  {
+    path: '/finishsignup',
+    name: 'Finish Sign Up',
+    component: FinishSignUp
   },
   {
     path: '/:pathMatch(.*)*',
