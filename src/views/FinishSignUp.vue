@@ -1,6 +1,5 @@
-<template>
-<Container>
-    <Section hero withNavBar theme="">
+<template>   
+    <Section withNavBar hero color="" size="is-fullheight"  >
     <!--
     <p>
       <o-field grouped group-multiline>
@@ -58,6 +57,7 @@
       </o-field>
     </p>
     -->
+    <Container>
     <o-steps
       v-model="activeStep"
       :animated="isAnimated"
@@ -169,22 +169,25 @@
         </o-button>
       </template>
     </o-steps>
+    </Container>
   </Section>
-  </Container>
+
 </template>
 
 <script>
 import Container from "@/components/Container";
 import Section from "@/components/Section";
+// import Navbar from "@/components/Navbar"
 import swal from 'sweetalert';
 
   export default {
     components: {
         Container,
-        Section
+        Section,
+       // Navbar
     },
     setup(){
-        swal ( "Finished" ,  "Your account has been set up!" ,  "success" )
+        swal ( "Finished" ,  "Your account has been set up!" ,  "success" );
     },
     data() {
       return {
@@ -207,5 +210,11 @@ import swal from 'sweetalert';
     }
   }
 </script>
-<style scoped>
+<style>
+.swal-button {
+    background-color: #7957d5;
+}
+.o-step-navigation{
+    text-align: center!important;
+}
 </style>
