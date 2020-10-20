@@ -176,11 +176,15 @@
 <script>
 import Container from "@/components/Container";
 import Section from "@/components/Section";
+import swal from 'sweetalert';
 
   export default {
     components: {
         Container,
         Section
+    },
+    setup(){
+        swal ( "Finished" ,  "Your account has been set up!" ,  "success" )
     },
     data() {
       return {
