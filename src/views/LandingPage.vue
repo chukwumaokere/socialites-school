@@ -64,6 +64,7 @@
     
     </Section>
     -->
+    <!-- THE HIDDEN KEY WORD IS: 1337H4X0RZ -->
     <Section id="join" hero size="is-medium" textorientation="has-text-centered" color="is-info" title="Ready to join?">
         <Container class="has-text-left box">
             <div class="columns">
@@ -100,6 +101,8 @@
                         <h3 class="subtitle" style="color: #4a4a4a;"> We also offer an additional 10% off on referrals and friends and family discounts!</h3>                        
                         <h3 class="subtitle" style="color: #4a4a4a;"> All students get access to our Discord where you can talk with other students and teachers to collaborate and learn together!</h3>
                         <p> We're here for you so please let us know what accommodations you might need and we'll definitely put those first </p>
+                        <br>
+                        <p class="help"> On top of all those discounts, if you can find our special "hackers" hidden word on this page, you can get an additional 10% off. Just make sure to include it in the "Message" section you send to us! </p>
                         
                     </div>
                 </div>
@@ -123,6 +126,7 @@ import Container from "@/components/Container";
 import FooterSection from "@/components/FooterSection";
 import Select from "@/components/Select";
 import API from "@/lib/API";
+import swal from 'sweetalert';
 //import Card from "@/components/Card";
 
 export default {
@@ -175,6 +179,7 @@ export default {
             if(tac.checked && !Object.values(info).some(v => (v == null || v == ''))){
                 info.message = document.getElementById("form_textarea").value;
                 //console.log(info,'it works and everythings filled');
+                swal ( "Thanks!" ,  "Finish your sign up by confirming your account through the email you were just sent!" ,  "success" );
                 API.SubmitForm(info).then(res => {
                     if(res.success){
                         //morph form to success : Finish sign up by clicking the confirmation email you were just sent
@@ -198,5 +203,8 @@ export default {
 }
 .hero.is-primary .modal-card-body > label, .hero.is-dark .modal-card-body > label {
     color: #4a4a4a;
+}
+.swal-button {
+    background-color: #7957d5;
 }
 </style>
