@@ -160,6 +160,9 @@ a.router-link-exact-active {
 .dropdown-menu{
     transition: 3s;
 }
+.navbar-dropdown > a.navbar-item {
+  color: #4a4a4a !important;
+}
 
 @media only screen and (max-width: 1023px) {
   .dropdown-content {

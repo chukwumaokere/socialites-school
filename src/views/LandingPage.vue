@@ -179,7 +179,8 @@ export default {
             if(tac.checked && !Object.values(info).some(v => (v == null || v == ''))){
                 info.message = document.getElementById("form_textarea").value;
                 //console.log(info,'it works and everythings filled');
-                swal ( "Thanks!" ,  "Finish your sign up by confirming your account through the email you were just sent!" ,  "success" );
+                //Disable button, wait 3 seconds, show swal alert
+                swal ( "Thanks!" ,  "Finish your sign up by confirming your account through the email you were just sent!" ,  "success" );                
                 API.SubmitForm(info).then(res => {
                     if(res.success){
                         //morph form to success : Finish sign up by clicking the confirmation email you were just sent

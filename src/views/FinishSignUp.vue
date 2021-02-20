@@ -150,15 +150,16 @@
       </div>
       </o-step-item>
 
-      <o-step-item step="3" :visible="showSocial" label="Social" :clickable="isStepsClickable">
+<!--       <o-step-item step="3" :visible="showSocial" label="Social" :clickable="isStepsClickable">
         <h1 class="title has-text-centered">Social</h1>
         Lorem ipsum dolor sit amet.
       </o-step-item>
+      -->
 
       <o-step-item :step="showSocial ? '4' : '3'" label="Finish" :clickable="isStepsClickable" disabled>
         <h1 class="title has-text-centered">Finish</h1>
         <h1 class="title has-text-centered is-4">Your account is now created!</h1>
-      </o-step-item>
+      </o-step-item> 
 
       <template v-if="customNavigation" v-slot:navigation="{previous,next}">
         <o-button outlined variant="danger" icon-pack="fas" icon-left="backward" :disabled="previous.disabled" @click.prevent="previous.action">
@@ -178,7 +179,8 @@
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 // import Navbar from "@/components/Navbar"
-import swal from 'sweetalert';
+//import swal from 'sweetalert';
+//import ClassWatcher from "@/lib/ClassWatcher";
 
   export default {
     components: {
@@ -187,8 +189,16 @@ import swal from 'sweetalert';
        // Navbar
     },
     setup(){
-        swal ( "Finished" ,  "Your account has been set up!" ,  "success" );
+        //Show on third screen only...
+        /*
+        function showNotif(){
+            swal ( "Finished" ,  "Your account has been set up!" ,  "success" );
+        }*/
+        
+        //steps[2].addEventListener('')
+        //new ClassWatcher(steps[2], 'o-step-item-active', showNotif)
     },
+ 
     data() {
       return {
         activeStep: 0,
